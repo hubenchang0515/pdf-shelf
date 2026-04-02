@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "scan": "tsx tools/scan.ts",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npx wrangler pages deploy dist --branch main"
   },
   "dependencies": {
     "@solidjs/router": "^0.16.1",
@@ -19,10 +19,10 @@
   },
   "devDependencies": {
     "@types/node": "^24.12.0",
-    "gh-pages": "^6.3.0",
     "tsx": "^4.21.0",
     "typescript": "~5.9.3",
     "vite": "^8.0.1",
-    "vite-plugin-solid": "^2.11.11"
+    "vite-plugin-solid": "^2.11.11",
+    "wrangler": "^4.80.0"
   }
 }
