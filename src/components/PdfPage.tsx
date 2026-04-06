@@ -121,13 +121,13 @@ export default function PdfPage(props:PdfPageProps) {
     return (
         <div ref={root} id={`pdf-page-${props.page}`} class='w-auto flex justify-center'>
             <div class="flex flex-col bg-white relative">
-                <p class="text-center text-sm text-gray-400">{props.title}</p>
+                <a class="text-center text-sm text-gray-400" href={`#pdf-page-${props.page}`}>{props.title}</a>
                 <div ref={container} class='relative leading-none max-w-full' style={{width:props.defaultWidth+'px', height:props.defaultHeight+'px'}}>
                     <canvas ref={canvas}  class='bg-gray-50 h-full max-w-full'/>
                     <div ref={textLayerDiv} class='textLayer'/>
                     <div ref={annotationLayerDiv} class='annotationLayer'/>
                 </div>
-                <p class="text-center text-sm text-gray-400">{props.page}</p>
+                <a class="text-center text-sm text-gray-400" href={`#pdf-page-${props.page}`}>{props.page}</a>
                 <div class="hidden dark:block absolute top-0 bottom-0 left-0 right-0 bg-black/50 pointer-events-none"/>
             </div>
         </div>

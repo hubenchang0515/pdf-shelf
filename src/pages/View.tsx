@@ -55,7 +55,7 @@ export default function View(props:ViewProps) {
                         (_, i) => <PdfPage title={file!.name} pdf={pdf()} page={1 + i()} defaultWidth={size()[0]} defaultHeight={size()[1]}/>
                     }
                     </For>
-                    <ToolBar pdf={pdf()} page={page()} onJump={onJump}/>
+                    <ToolBar name={file!.name} filepath={file!.path} pdf={pdf()} page={page()} onJump={onJump}/>
                 </Show>
             </div>
         </main>
