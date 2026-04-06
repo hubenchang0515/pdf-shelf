@@ -5,6 +5,10 @@ html, body, #root {
   padding: 0;
 }
 
+* {
+  scroll-margin-top: 48px;
+}
+
 /* .textLayer > * {
   color: red !important;
   background: rgba(255, 255, 0, 0.3) !important;
