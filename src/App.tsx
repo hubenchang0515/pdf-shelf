@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import summary from "./assets/summary.json"
 import View from "./pages/View";
 import Footer from "./components/Footer";
+import type { Summary } from "./types/summary";
 
 function App() {
 
@@ -12,10 +13,10 @@ function App() {
         <div class='h-full flex flex-col bg-gray-100 dark:bg-gray-900'>
             <Header/>
             <Router>
-                <Route path="/" component={()=><Home summary={summary}/>}/>
+                <Route path="/" component={()=><Home summary={summary as Summary}/>}/>
                 {
-                    summary.flatMap(dir => dir.files).map(file => {
-                        return <Route path={file.id} component={()=><View summary={summary} id={file.id}/>}/>
+                    summary.flatMap(dir => dir.docs).map(doc => {
+                        return <Route path={doc.id} component={()=><View summary={summary as Summary} id={doc.id}/>}/>
                     })
                 }
             </Router>

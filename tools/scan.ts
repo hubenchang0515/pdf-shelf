@@ -2,17 +2,20 @@ import fs from 'fs/promises';
 import path from 'path';
 import crypto from 'crypto';
 
-interface File {
+type DocumentType = 'pdf' | 'dir' | 'txt';
+
+interface Document {
     id: string;
+    type: DocumentType;
     name: string;
     path: string;
 }
 
-interface Dir {
+interface Category {
     id: string;
     name: string;
     path: string;
-    files: File[];
+    docs: Document[];
 }
 
 // 计算字符串的 SHA256 哈希值
@@ -24,7 +27,7 @@ function sha256String(data: string): string {
 
 async function scanRoot(dirpath:string='') {
     const fulldirpath = path.posix.join('public', dirpath)
-    const items:Dir[] = [];
+    const items:Category[] = [];
     const files = await fs.readdir(fulldirpath, { withFileTypes: true });
     for (const file of files) {
         // 不是目录，忽略
@@ -38,7 +41,7 @@ async function scanRoot(dirpath:string='') {
             id: sha256String(pathname),
             name: file.name,
             path: pathname,
-            files: await scanDir(pathname),
+            docs: await scanDir(pathname),
         });
     }
     return items;
@@ -46,28 +49,44 @@ async function scanRoot(dirpath:string='') {
 
 async function scanDir(dirpath:string='') {
     const fulldirpath = path.posix.join('public', dirpath)
-    const items:File[] = [];
+    const items:Document[] = [];
     const files = await fs.readdir(fulldirpath, { withFileTypes: true });
     for (const file of files) {
-        // 不是 PDF，忽略
-        if (!file.isFile() || !file.name.endsWith('.pdf')) {
-            continue;
-        }
-
-        // Cloudflare：大于 25MB，忽略
-        const pathname = path.posix.join(fulldirpath, file.name);
-        const stat = await fs.stat(pathname);
-        if (stat.size > 25 * 1024 * 1024) {
-            continue;
-        }
-
-        // pdf 文件，添加
         const uri = path.posix.join(dirpath, file.name);
-        items.push({
-            id: sha256String(uri).slice(0, 6),
-            name: file.name.slice(0, -4),
-            path: uri,
-        });
+        const id = sha256String(uri).slice(0, 10);
+
+        // 目录，需要加载 manifest.json
+        if (file.isDirectory()) {
+            items.push({
+                id: id,
+                type: 'dir',
+                name: file.name,
+                path: uri,
+            });
+            continue;
+        } 
+
+        // pdf 文件，直接加载
+        if (file.name.endsWith('.pdf')) {
+            items.push({
+                id: id,
+                type: 'pdf',
+                name: file.name.slice(0, -4),
+                path: uri,
+            });
+            continue;
+        }
+
+        // txt 文件，导向外部资源
+        if (file.name.endsWith('.txt')) {
+            items.push({
+                id: id,
+                type: 'txt',
+                name: file.name.slice(0, -4),
+                path: uri,
+            });
+            continue;
+        }
     }
     return items
 }

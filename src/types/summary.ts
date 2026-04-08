@@ -1,14 +1,17 @@
-interface File {
+type DocumentType = 'pdf' | 'dir' | 'txt';
+
+interface Document {
     id: string;
+    type: DocumentType;
     name: string;
     path: string;
 }
 
-interface Dir {
+interface Category {
     id: string;
     name: string;
     path: string;
-    files: File[];
+    docs: Document[];
 }
 
-export type Summary = Dir[];
+export type Summary = Category[];
