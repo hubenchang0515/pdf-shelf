@@ -1,6 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import crypto from 'crypto';
+import { sum } from 'pdf-lib';
 
 type DocumentType = 'pdf' | 'dir' | 'txt';
 
@@ -52,11 +53,23 @@ async function scanDir(dirpath:string='') {
     const items:Document[] = [];
     const files = await fs.readdir(fulldirpath, { withFileTypes: true });
     for (const file of files) {
+        const filepath = path.posix.join('public',dirpath, file.name);
         const uri = path.posix.join(dirpath, file.name);
         const id = sha256String(uri).slice(0, 10);
 
         // 目录，需要加载 manifest.json
         if (file.isDirectory()) {
+            // 如果 manifest.json 不存在，则自动生成
+            const json = path.posix.join('public', uri, 'manifest.json');
+            fs.access(json).catch(async () => {
+                const files = await fs.readdir(filepath, { withFileTypes: true });
+                const manifest = {
+                    name: file.name,
+                    partitions: files.filter(f => f.isFile() && f.name.endsWith('.pdf')).map(f => f.name),
+                };
+                await fs.writeFile(json, JSON.stringify(manifest, null, 4), 'utf-8');
+            });
+
             items.push({
                 id: id,
                 type: 'dir',
@@ -95,6 +108,17 @@ async function main() {
     const items = await scanRoot('pdfs');
     const data = JSON.stringify(items);
     fs.writeFile('src/assets/summary.json', data);
+
+    let summary = "";
+    for (const item of items) {
+        for (const doc of item.docs) {
+            summary += `- [${doc.name}](https://pdf-shelf.pages.dev/${doc.id})\n`;
+        }
+    }
+
+    const text = await fs.readFile('README.md', 'utf-8');
+    const readme = text.replace(/## 文档目录[\s\S]*/, '## 文档目录\n\n' + summary);
+    fs.writeFile('README.md', readme, 'utf-8');
 }
 
 main()
