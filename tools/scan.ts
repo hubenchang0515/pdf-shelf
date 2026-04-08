@@ -1,7 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
 import crypto from 'crypto';
-import { sum } from 'pdf-lib';
 
 type DocumentType = 'pdf' | 'dir' | 'txt';
 
@@ -111,8 +110,9 @@ async function main() {
 
     let summary = "";
     for (const item of items) {
+        summary += `- ${item.name}\n`;
         for (const doc of item.docs) {
-            summary += `- [${doc.name}](https://pdf-shelf.pages.dev/${doc.id})\n`;
+            summary += `  - [${doc.name}](https://pdf-shelf.pages.dev/${doc.id})\n`;
         }
     }
 
