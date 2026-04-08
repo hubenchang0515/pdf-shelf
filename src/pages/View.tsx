@@ -1,6 +1,6 @@
 
 import type { Summary } from '../types/summary';
-import { createSignal, For, onMount, Show } from "solid-js";
+import { createSignal, For, onCleanup, onMount, Show } from "solid-js";
 import * as pdfjsLib from "pdfjs-dist";
 import 'pdfjs-dist/web/pdf_viewer.css';
 
@@ -66,6 +66,23 @@ export default function View(props:ViewProps) {
         const div = document.getElementById(`pdf-page-${page}`);
         div?.scrollIntoView();
     }
+
+    const handleScroll = () => {
+        const pageElements = view.children;
+        // 找到第一个完全或部分可见的页
+        for (let i = 0; i < pageElements.length; i++) {
+            const rect = pageElements[i].getBoundingClientRect();
+            if (rect.top + rect.height / 2 > 0) {
+                setPage(i + 1);
+                break;
+            }
+        }
+    };
+
+    onMount(() => {
+        window.addEventListener("scroll", handleScroll);
+        onCleanup(() => window.removeEventListener("scroll", handleScroll));
+    });
 
     return (
         <main class='relative w-full h-full shrink-1 p-2'>

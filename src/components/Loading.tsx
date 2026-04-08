@@ -5,7 +5,7 @@ export default function Loading() {
                 加载中，请耐心等待。
                 <br/>
                 墙内用户若访问不畅请尝试
-                <a href='https://my.cloudnz.cc/aff.php?aff=21412' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline'>
+                <a href='https://linkcube.org/aff.php?aff=2998' target='_blank' rel='noopener noreferrer' class='text-blue-500 hover:underline'>
                     科学上网
                 </a>
                 。
