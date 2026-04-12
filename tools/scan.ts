@@ -109,15 +109,17 @@ async function main() {
     fs.writeFile('src/assets/summary.json', data);
 
     let summary = "";
+    let count = 0
     for (const item of items) {
         summary += `- ${item.name}\n`;
         for (const doc of item.docs) {
             summary += `  - [${doc.name}](https://pdf-shelf.pages.dev/${doc.id})\n`;
+            count += 1;
         }
     }
 
     const text = await fs.readFile('README.md', 'utf-8');
-    const readme = text.replace(/## 文档目录[\s\S]*/, '## 文档目录\n\n' + summary);
+    const readme = text.replace(/## 文档目录[\s\S]*/, `## 文档目录\n\n> 共收录 ${count} 部 PDF 文档\n\n` + summary);
     fs.writeFile('README.md', readme, 'utf-8');
 }
 

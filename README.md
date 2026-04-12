@@ -41,6 +41,8 @@ PDF sharing site - PDF 分享站点
 
 ## 文档目录
 
+> 共收录 75 部 PDF 文档
+
 - Android
   - [Android编程权威指南](https://pdf-shelf.pages.dev/1a8e00a0ab)
 - C++
@@ -128,7 +130,10 @@ PDF sharing site - PDF 分享站点
   - [C++17](https://pdf-shelf.pages.dev/adb1984563)
   - [C++20](https://pdf-shelf.pages.dev/fbc4e30c70)
   - [C++23](https://pdf-shelf.pages.dev/021360018a)
-  - [C99标准文档](https://pdf-shelf.pages.dev/548782c4cd)
+  - [C11](https://pdf-shelf.pages.dev/47496b4a2a)
+  - [C17](https://pdf-shelf.pages.dev/068381d919)
+  - [C23](https://pdf-shelf.pages.dev/75610938eb)
+  - [C99](https://pdf-shelf.pages.dev/6eedafa68b)
   - [Miracast_Specification_v2.2](https://pdf-shelf.pages.dev/71a97add09)
 - 通识基础
   - [如何阅读一本书](https://pdf-shelf.pages.dev/c24e5ccc33)
