@@ -78,6 +78,19 @@ PDF sharing site - PDF 分享站点
 - Windows
   - [Windows核心编程](https://pdf-shelf.pages.dev/f008269e3e)
   - [Windows程序设计](https://pdf-shelf.pages.dev/06b3b7f3c1)
+- 小学数学
+  - [数学一年级上册](https://pdf-shelf.pages.dev/28b1462563)
+  - [数学一年级下册](https://pdf-shelf.pages.dev/a37f210770)
+  - [数学三年级上册](https://pdf-shelf.pages.dev/11331ba015)
+  - [数学三年级下册](https://pdf-shelf.pages.dev/29fd000a4e)
+  - [数学二年级上册](https://pdf-shelf.pages.dev/ae2646b51a)
+  - [数学二年级下册](https://pdf-shelf.pages.dev/5ce4f250f5)
+  - [数学五年级上册](https://pdf-shelf.pages.dev/24487ff378)
+  - [数学五年级下册](https://pdf-shelf.pages.dev/0944c6bc69)
+  - [数学六年级上册](https://pdf-shelf.pages.dev/2bb1121d78)
+  - [数学六年级下册](https://pdf-shelf.pages.dev/6e9d23343b)
+  - [数学四年级上册](https://pdf-shelf.pages.dev/1ed27feb5b)
+  - [数学四年级下册](https://pdf-shelf.pages.dev/4cd1c9f7ef)
 - 网络
   - [TCP_IP详解卷1：协议](https://pdf-shelf.pages.dev/d80209a7b8)
   - [TCP_IP详解卷2：实现](https://pdf-shelf.pages.dev/324384b9ea)
