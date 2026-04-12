@@ -119,7 +119,7 @@ async function main() {
     }
 
     const text = await fs.readFile('README.md', 'utf-8');
-    const readme = text.replace(/## 文档目录[\s\S]*/, `## 文档目录\n\n> 共收录 ${count} 部 PDF 文档\n\n` + summary);
+    const readme = text.replace(/## 文档目录[\s\S]*/, `## 文档目录\n\n> 共收录 ${count} 部书籍\n\n` + summary);
     fs.writeFile('README.md', readme, 'utf-8');
 }
 

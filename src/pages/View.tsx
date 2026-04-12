@@ -114,7 +114,7 @@ export default function View(props:ViewProps) {
     return (
         <main class='relative w-full h-full shrink-1 p-2'>
             <div ref={view} class='max-w-3xl m-auto flex flex-col gap-1'>
-                <Show when={size()[1] > 0} fallback={<Loading/>}>
+                <Show when={size()[1] > 0} fallback={<Loading title={file!.name}/>}>
                     <For each={new Array(pdf().numPages)}>
                     {
                         (_, i) => <PdfPage title={file!.name} pdf={pdf()} page={1 + i()} defaultWidth={size()[0]} defaultHeight={size()[1]}/>
