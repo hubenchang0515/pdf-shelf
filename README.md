@@ -1,9 +1,12 @@
-## PDF Shelf
+## PDF Shelf 
+
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://pdf-shelf.pages.dev/)
 
 PDF sharing site - PDF 分享站点
 
-![home](./preview/home.png)
+[文档目录](#文档目录)
 
+![home](./preview/home.png)
 ![view](./preview/view.png)
 
 ## Usage
@@ -55,13 +58,18 @@ PDF sharing site - PDF 分享站点
   - [Effective Java 中文版（第2版）](https://pdf-shelf.pages.dev/0614b84a44)
   - [Java编程思想](https://pdf-shelf.pages.dev/775b57aa9e)
 - JavaScript
+  - [JavaScript权威指南(第6版)](https://pdf-shelf.pages.dev/017c47d7ae)
   - [JavaScript高级程序设计](https://pdf-shelf.pages.dev/76855ecc35)
+  - [Node.js实战](https://pdf-shelf.pages.dev/8a7465a18b)
+  - [Node.js开发指南](https://pdf-shelf.pages.dev/948286feaf)
+  - [Node与Express开发](https://pdf-shelf.pages.dev/e592472ece)
 - Kotlin
   - [Kotlin编程权威指南](https://pdf-shelf.pages.dev/a6d79559c7)
 - Linux
   - [Linux命令帮助手册](https://pdf-shelf.pages.dev/448bfafbf5)
   - [Linux系统编程](https://pdf-shelf.pages.dev/9bdee2d999)
   - [UNIX环境高级编程](https://pdf-shelf.pages.dev/7680344cf8)
+  - [跟我一起写makefile](https://pdf-shelf.pages.dev/aff2845f77)
   - [鸟哥的 Linux 私房菜：基础学习篇 第四版](https://pdf-shelf.pages.dev/3385727149)
   - [鸟哥的Linux私房菜：服务器架设篇 第三版](https://pdf-shelf.pages.dev/43a709eb79)
 - MongoDB
