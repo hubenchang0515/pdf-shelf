@@ -2,12 +2,16 @@
 
 [![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://pdf-shelf.pages.dev/)
 
-PDF sharing site - PDF 分享站点
 
-[文档目录](#文档目录)
+<details>
+
+<summary>项目说明</summary>
+
+PDF sharing site - PDF 分享站点
 
 ![home](./preview/home.png)
 ![view](./preview/view.png)
+
 
 ## Usage
 
@@ -32,6 +36,8 @@ PDF sharing site - PDF 分享站点
 * https://github.com/0voice/expert_readed_books
 * https://github.com/TapXWorld/ChinaTextbook
 * https://github.com/zxysilent/books
+
+</details>
 
 ## 文档目录
 
