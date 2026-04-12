@@ -28,6 +28,7 @@ PDF sharing site - PDF 分享站点
 * https://github.com/ailyanlu1/free-programming-books.pdf
 * https://github.com/0voice/expert_readed_books
 * https://github.com/TapXWorld/ChinaTextbook
+* https://github.com/zxysilent/books
 
 ## 文档目录
 
@@ -47,7 +48,9 @@ PDF sharing site - PDF 分享站点
   - [C陷阱与缺陷](https://pdf-shelf.pages.dev/0efc8d68b0)
 - Go
   - [Go程序设计语言](https://pdf-shelf.pages.dev/c5c9fae1ae)
+  - [Go语言圣经](https://pdf-shelf.pages.dev/7dbfc1753f)
   - [Go语言实战](https://pdf-shelf.pages.dev/5fbc1d1e4f)
+  - [Go高级编程](https://pdf-shelf.pages.dev/d12c1616d2)
 - Java
   - [Effective Java 中文版（第2版）](https://pdf-shelf.pages.dev/0614b84a44)
   - [Java编程思想](https://pdf-shelf.pages.dev/775b57aa9e)
@@ -59,6 +62,8 @@ PDF sharing site - PDF 分享站点
   - [Linux命令帮助手册](https://pdf-shelf.pages.dev/448bfafbf5)
   - [Linux系统编程](https://pdf-shelf.pages.dev/9bdee2d999)
   - [UNIX环境高级编程](https://pdf-shelf.pages.dev/7680344cf8)
+  - [鸟哥的 Linux 私房菜：基础学习篇 第四版](https://pdf-shelf.pages.dev/3385727149)
+  - [鸟哥的Linux私房菜：服务器架设篇 第三版](https://pdf-shelf.pages.dev/43a709eb79)
 - MongoDB
   - [MongoDB权威指南](https://pdf-shelf.pages.dev/c4d8d93c84)
   - [深入学习MongoDB](https://pdf-shelf.pages.dev/ffc0eace1e)
@@ -67,6 +72,9 @@ PDF sharing site - PDF 分享站点
   - [Python内置函数帮助手册](https://pdf-shelf.pages.dev/405c3b9886)
   - [Python基础教程](https://pdf-shelf.pages.dev/30200a7962)
   - [Python核心编程](https://pdf-shelf.pages.dev/cf9ee59a15)
+  - [Python编程：从入门到实践](https://pdf-shelf.pages.dev/09e317d46d)
+  - [PyTorch官方教程中文版](https://pdf-shelf.pages.dev/db391be00e)
+  - [利用Python进行数据分析](https://pdf-shelf.pages.dev/9386b895c1)
 - Redis
   - [Redis入门指南（第2版）](https://pdf-shelf.pages.dev/af94d77093)
   - [Redis开发与运维](https://pdf-shelf.pages.dev/a5780e7a51)
