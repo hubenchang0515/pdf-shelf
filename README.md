@@ -41,7 +41,7 @@ PDF sharing site - PDF 分享站点
 
 ## 文档目录
 
-> 共收录 75 部 PDF 文档
+> 共收录 76 部 PDF 文档
 
 - Android
   - [Android编程权威指南](https://pdf-shelf.pages.dev/1a8e00a0ab)
@@ -115,6 +115,8 @@ PDF sharing site - PDF 分享站点
   - [数学六年级下册](https://pdf-shelf.pages.dev/6e9d23343b)
   - [数学四年级上册](https://pdf-shelf.pages.dev/1ed27feb5b)
   - [数学四年级下册](https://pdf-shelf.pages.dev/4cd1c9f7ef)
+- 汇编语言
+  - [汇编语言 第4版](https://pdf-shelf.pages.dev/3ed146240f)
 - 网络
   - [TCP_IP详解卷1：协议](https://pdf-shelf.pages.dev/d80209a7b8)
   - [TCP_IP详解卷2：实现](https://pdf-shelf.pages.dev/324384b9ea)
