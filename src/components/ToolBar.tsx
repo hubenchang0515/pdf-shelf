@@ -5,6 +5,7 @@ import LeftIcon from "../assets/icons/LeftIcon";
 import RightIcon from "../assets/icons/RightIcon";
 import Outline from "./Outline";
 import DownloadIcon from "../assets/icons/DownloadIcon";
+import ShareIcon from "../assets/icons/ShareIcon";
 
 export interface ToolBarProps {
     name: string;
@@ -24,15 +25,22 @@ export default function ToolBar(props:ToolBarProps) {
         }
     });
 
+    const share = async () => {
+        await navigator.clipboard.writeText(window.location.href);
+        alert("已将本页链接复制到剪贴板，您可以分享给其他人哦~");
+    };
+
+
     return (
         <div>
             <div class="fixed bottom-0 left-0 right-0 z-50 h-10 px-2 flex gap-2 justify-between items-center bg-gray-300 dark:bg-gray-700 touch-none">
                 <button class="cursor-pointer hover:scale-110 active:scale-100 bg-gray-200 dark:bg-gray-600 p-1" onClick={()=>setShowOutline(!showOutline())}><ListIcon/></button>
                 <a class="cursor-pointer hover:scale-110 active:scale-100 bg-gray-200 dark:bg-gray-600 p-1" href={props.filepath} download={props.name + '.pdf'}><DownloadIcon/></a>
+                <button class="cursor-pointer hover:scale-110 active:scale-100 bg-gray-200 dark:bg-gray-600 p-1" onClick={share}><ShareIcon/></button>
                 <div class="flex-1"/>
                 <span class="flex gap-2 items-center">
                     <button class="cursor-pointer hover:scale-110 active:scale-100 bg-gray-200 dark:bg-gray-600 p-1" onClick={()=>props.onJump(props.page <= 1 ? 1 : props.page - 1)}><LeftIcon/></button>
-                    <input type="number" class="appearance-none w-12 hover:bg-white focus:bg-white" min={1} max={props.pdf.numPages} value={props.page} onChange={(ev)=>props.onJump(Number(ev.target.value))}></input>
+                    <input type="number" class="appearance-none outline-none w-12 hover:text-black hover:bg-white focus:text-black focus:bg-white" min={1} max={props.pdf.numPages} value={props.page} onChange={(ev)=>props.onJump(Number(ev.target.value))}></input>
                     <span>/</span>
                     <span>{props.pdf.numPages}</span>
                     <button class="cursor-pointer hover:scale-110 active:scale-100 bg-gray-200 dark:bg-gray-600 p-1" onClick={()=>props.onJump(props.page >= props.pdf.numPages ? props.pdf.numPages : props.page + 1)}><RightIcon/></button>
