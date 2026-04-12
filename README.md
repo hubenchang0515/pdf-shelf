@@ -27,6 +27,7 @@ PDF sharing site - PDF 分享站点
 * https://github.com/Jing--Li/book
 * https://github.com/ailyanlu1/free-programming-books.pdf
 * https://github.com/0voice/expert_readed_books
+* https://github.com/TapXWorld/ChinaTextbook
 
 ## 文档目录
 

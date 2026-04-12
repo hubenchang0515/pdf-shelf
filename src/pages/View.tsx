@@ -16,15 +16,32 @@ export interface ViewProps {
     id: string;
 }
 
-async function merge(path:string) {
-    const res = await fetch(path + '/manifest.json');
-    const manifest = await res.json();
-    const files = await Promise.all(manifest.partitions.map(async (file:string) => {
-        const res = await fetch(path + '/' + file);
+async function merge(partitions:string[]) {
+    const files = await Promise.all(partitions.map(async (file:string) => {
+        const res = await fetch(file);
         const data = await res.arrayBuffer();
         return new File([data], file, { type:'application/octet-stream' });
     }));
     return await mergePdf(files);
+}
+
+async function loadPdf(filepath:string) {
+    return await merge(['/cover.pdf', filepath]);
+}
+
+async function loadTxt(filepath:string) {
+    const res = await fetch(filepath);
+    const text = await res.text();
+    return await merge(['/cover.pdf', text]);
+}
+
+async function loadDir(dirpath:string) {
+    const res = await fetch(dirpath + '/manifest.json');
+    const manifest = await res.json();
+    const partitions = await Promise.all(manifest.partitions.map(async (file:string) => {
+        return dirpath + '/' + file;
+    }));
+    return await merge(['/cover.pdf', ...partitions]);
 }
 
 export default function View(props:ViewProps) {
@@ -39,9 +56,19 @@ export default function View(props:ViewProps) {
     // 初始化
     onMount(async () => {
         let path = file!.path;
-        if (file!.type === 'dir') {
-            path = await merge(path);
-            setPath(path);
+        switch (file!.type) {
+            case 'dir':
+                path = await loadDir(path);
+                setPath(path);
+                break;
+            case 'pdf':
+                path = await loadPdf(path);
+                setPath(path);
+                break;
+            case 'txt':
+                path = await loadTxt(path);
+                setPath(path);
+                break;
         }
 
         const doc = await pdfjsLib.getDocument({
