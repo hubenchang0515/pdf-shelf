@@ -1,6 +1,6 @@
 
 import type { Summary } from '../types/summary';
-import { createSignal, For, onCleanup, onMount, Show } from "solid-js";
+import { createEffect, createSignal, For, onCleanup, onMount, Show } from "solid-js";
 import * as pdfjsLib from "pdfjs-dist";
 import 'pdfjs-dist/web/pdf_viewer.css';
 
@@ -9,6 +9,7 @@ import PdfPage from '../components/PdfPage';
 import ToolBar from '../components/ToolBar';
 import Loading from '../components/Loading';
 import { mergePdf } from '../utils/pdf';
+import { getHistory, setHistory } from '../utils/history';
 pdfjsLib.GlobalWorkerOptions.workerSrc = workerSrc;
 
 export interface ViewProps {
@@ -45,13 +46,46 @@ async function loadDir(dirpath:string) {
 }
 
 export default function View(props:ViewProps) {
+    let view!: HTMLDivElement;
     const file = props.summary.flatMap(dir => dir.docs).find(file => file.id === props.id);
     const [path, setPath] = createSignal<string>(file!.name);
     const [pdf, setPdf] = createSignal<any>();
     const [size, setSize] = createSignal<[number, number]>([0,0]);
     const [page, setPage] = createSignal(1);
+
+    // 记录历史
+    createEffect(() => {
+        if (page() > 1) {
+            setHistory(props.id, page());
+        }
+    });
+
+    // 页面跳转
+    const onJump = (page:number) => {
+        setPage(page);
+        const div = document.getElementById(`pdf-page-${page}`);
+        div?.scrollIntoView();
+    }
+
+    // 滚动时更新页码
+    const handleScroll = () => {
+        const pageElements = view.children;
+        // 找到第一个完全或部分可见的页
+        for (let i = 0; i < pageElements.length; i++) {
+            const rect = pageElements[i].getBoundingClientRect();
+            if (rect.top + rect.height / 2 > 0) {
+                setPage(i + 1);
+                break;
+            }
+        }
+    };
+
+    // 注册事件
+    onMount(() => {
+        window.addEventListener("scroll", handleScroll);
+        onCleanup(() => window.removeEventListener("scroll", handleScroll));
+    });
     
-    let view!: HTMLDivElement;
 
     // 初始化
     onMount(async () => {
@@ -81,35 +115,15 @@ export default function View(props:ViewProps) {
         setPdf(doc);
 
         // 设置尺寸
-        const page = await doc.getPage(1);
+        const page = await doc.getPage(2); // 第一页是 cover.pdg，第二页才是实际页
         const viewport = page.getViewport({ scale: 2});
         const divScale = view.clientWidth / viewport.width;
         setSize([viewport.width * divScale, viewport.height * divScale]);
+
+        onJump(getHistory(props.id));
     });
 
-    // 页面跳转
-    const onJump = (page:number) => {
-        setPage(page);
-        const div = document.getElementById(`pdf-page-${page}`);
-        div?.scrollIntoView();
-    }
-
-    const handleScroll = () => {
-        const pageElements = view.children;
-        // 找到第一个完全或部分可见的页
-        for (let i = 0; i < pageElements.length; i++) {
-            const rect = pageElements[i].getBoundingClientRect();
-            if (rect.top + rect.height / 2 > 0) {
-                setPage(i + 1);
-                break;
-            }
-        }
-    };
-
-    onMount(() => {
-        window.addEventListener("scroll", handleScroll);
-        onCleanup(() => window.removeEventListener("scroll", handleScroll));
-    });
+    
 
     return (
         <main class='relative w-full h-full shrink-1 p-2'>
