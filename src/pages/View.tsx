@@ -120,7 +120,7 @@ export default function View(props:ViewProps) {
         const divScale = view.clientWidth / viewport.width;
         setSize([viewport.width * divScale, viewport.height * divScale]);
 
-        onJump(getHistory(props.id));
+        onJump(getHistory(props.id)??1);
     });
 
     
