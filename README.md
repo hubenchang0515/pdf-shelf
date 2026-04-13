@@ -37,12 +37,13 @@ PDF sharing site - PDF 分享站点
 * https://github.com/TapXWorld/ChinaTextbook
 * https://github.com/zxysilent/books
 * https://github.com/Kensuke-Hinata/statistic
+* https://github.com/dolotech/ebook
 
 </details>
 
 ## 文档目录
 
-> 共收录 116 部书籍
+> 共收录 127 部书籍
 
 - Android
   - [Android编程权威指南](https://pdf-shelf.pages.dev/1a8e00a0ab)
@@ -65,6 +66,8 @@ PDF sharing site - PDF 分享站点
   - [Go高级编程](https://pdf-shelf.pages.dev/d12c1616d2)
 - Java
   - [Effective Java 中文版（第2版）](https://pdf-shelf.pages.dev/0614b84a44)
+  - [Head First JavaScript程序设计](https://pdf-shelf.pages.dev/1cd434d26c)
+  - [Java技术手册（第6版）](https://pdf-shelf.pages.dev/4dd35f8531)
   - [Java编程思想](https://pdf-shelf.pages.dev/775b57aa9e)
 - Kotlin
   - [Kotlin编程权威指南](https://pdf-shelf.pages.dev/a6d79559c7)
@@ -81,9 +84,14 @@ PDF sharing site - PDF 分享站点
   - [跟我一起写makefile](https://pdf-shelf.pages.dev/aff2845f77)
   - [鸟哥的 Linux 私房菜：基础学习篇 第四版](https://pdf-shelf.pages.dev/3385727149)
   - [鸟哥的Linux私房菜：服务器架设篇 第三版](https://pdf-shelf.pages.dev/43a709eb79)
+- Lua
+  - [Lua程序设计(第二版)](https://pdf-shelf.pages.dev/4b5d7c64af)
+  - [Lua设计与实现](https://pdf-shelf.pages.dev/cc77fc9cd0)
 - MongoDB
   - [MongoDB权威指南](https://pdf-shelf.pages.dev/c4d8d93c84)
   - [深入学习MongoDB](https://pdf-shelf.pages.dev/ffc0eace1e)
+- PHP
+  - [PHP基础教程（第4版）](https://pdf-shelf.pages.dev/92ab7feaa9)
 - Python
   - [Python Cookbook](https://pdf-shelf.pages.dev/7ac76e649f)
   - [Python内置函数帮助手册](https://pdf-shelf.pages.dev/405c3b9886)
@@ -104,6 +112,7 @@ PDF sharing site - PDF 分享站点
   - [Redis入门指南（第2版）](https://pdf-shelf.pages.dev/af94d77093)
   - [Redis开发与运维](https://pdf-shelf.pages.dev/a5780e7a51)
 - Rust
+  - [Rust程序设计](https://pdf-shelf.pages.dev/c47f169813)
   - [Rust程序设计语言](https://pdf-shelf.pages.dev/0ade59984b)
 - SQL
   - [MySQL必知必会](https://pdf-shelf.pages.dev/54b1e7ab59)
@@ -149,6 +158,16 @@ PDF sharing site - PDF 分享站点
   - [数学四年级下册](https://pdf-shelf.pages.dev/4cd1c9f7ef)
 - 汇编语言
   - [汇编语言 第4版](https://pdf-shelf.pages.dev/3ed146240f)
+- 算法
+  - [数据结构与算法分析](https://pdf-shelf.pages.dev/9d1e67fbfb)
+  - [算法导论](https://pdf-shelf.pages.dev/d321835f9b)
+  - [算法（第4版）](https://pdf-shelf.pages.dev/dfcf6db963)
+- 编译原理
+  - [两周自制脚本语言](https://pdf-shelf.pages.dev/de552dff4e)
+  - [用Go语言自制编译器](https://pdf-shelf.pages.dev/cbe74c9014)
+  - [用Go语言自制解释器](https://pdf-shelf.pages.dev/59749c21d3)
+  - [自制编程语言](https://pdf-shelf.pages.dev/0a4e561577)
+  - [自制编译器](https://pdf-shelf.pages.dev/7ef8facc47)
 - 网络
   - [HTTP_2基础教程](https://pdf-shelf.pages.dev/45ddeb4f56)
   - [HTTP权威指南](https://pdf-shelf.pages.dev/5c965e7fef)
@@ -160,22 +179,19 @@ PDF sharing site - PDF 分享站点
   - [图解HTTP](https://pdf-shelf.pages.dev/4aad2eeea3)
 - 计算机基础
   - [SICP](https://pdf-shelf.pages.dev/caeb7ad737)
-  - [数据结构与算法分析](https://pdf-shelf.pages.dev/9b164d431a)
   - [深入理解计算机系统](https://pdf-shelf.pages.dev/f1c5b9ef64)
   - [现代操作系统第三版](https://pdf-shelf.pages.dev/c27265f439)
-  - [算法导论](https://pdf-shelf.pages.dev/02d62e61b1)
-  - [算法（第4版）](https://pdf-shelf.pages.dev/b6ffc9456d)
   - [计算机程序的构造和解释](https://pdf-shelf.pages.dev/a31df151c9)
 - 说明书
-  - [C++11](https://pdf-shelf.pages.dev/6e82de0484)
-  - [C++14](https://pdf-shelf.pages.dev/7a603c2d19)
-  - [C++17](https://pdf-shelf.pages.dev/adb1984563)
-  - [C++20](https://pdf-shelf.pages.dev/fbc4e30c70)
-  - [C++23](https://pdf-shelf.pages.dev/021360018a)
-  - [C11](https://pdf-shelf.pages.dev/47496b4a2a)
-  - [C17](https://pdf-shelf.pages.dev/068381d919)
-  - [C23](https://pdf-shelf.pages.dev/75610938eb)
-  - [C99](https://pdf-shelf.pages.dev/6eedafa68b)
+  - [C++11标准草案](https://pdf-shelf.pages.dev/6525ffe11a)
+  - [C++14标准草案](https://pdf-shelf.pages.dev/d11394d30c)
+  - [C++17标准草案](https://pdf-shelf.pages.dev/c5550aa2cd)
+  - [C++20标准草案](https://pdf-shelf.pages.dev/eb31af2824)
+  - [C++23标准草案](https://pdf-shelf.pages.dev/e1e79a3661)
+  - [C11标准草案](https://pdf-shelf.pages.dev/223b2209bd)
+  - [C17标准草案](https://pdf-shelf.pages.dev/5e028b08c7)
+  - [C23标准草案](https://pdf-shelf.pages.dev/60bb3d458a)
+  - [C99标准草案](https://pdf-shelf.pages.dev/37c8d1692f)
   - [Miracast_Specification_v2.2](https://pdf-shelf.pages.dev/71a97add09)
 - 通识基础
   - [人月神话](https://pdf-shelf.pages.dev/1c6e4108a4)
