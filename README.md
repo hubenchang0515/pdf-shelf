@@ -43,7 +43,7 @@ PDF sharing site - PDF 分享站点
 
 ## 文档目录
 
-> 共收录 127 部书籍
+> 共收录 129 部书籍
 
 - Android
   - [Android编程权威指南](https://pdf-shelf.pages.dev/1a8e00a0ab)
@@ -69,6 +69,7 @@ PDF sharing site - PDF 分享站点
   - [Head First JavaScript程序设计](https://pdf-shelf.pages.dev/1cd434d26c)
   - [Java技术手册（第6版）](https://pdf-shelf.pages.dev/4dd35f8531)
   - [Java编程思想](https://pdf-shelf.pages.dev/775b57aa9e)
+  - [Spring Boot实战](https://pdf-shelf.pages.dev/1b1c91c737)
 - Kotlin
   - [Kotlin编程权威指南](https://pdf-shelf.pages.dev/a6d79559c7)
 - Linux
@@ -91,6 +92,7 @@ PDF sharing site - PDF 分享站点
   - [MongoDB权威指南](https://pdf-shelf.pages.dev/c4d8d93c84)
   - [深入学习MongoDB](https://pdf-shelf.pages.dev/ffc0eace1e)
 - PHP
+  - [PHP和MySQL Web开发](https://pdf-shelf.pages.dev/8b6e63cbe4)
   - [PHP基础教程（第4版）](https://pdf-shelf.pages.dev/92ab7feaa9)
 - Python
   - [Python Cookbook](https://pdf-shelf.pages.dev/7ac76e649f)

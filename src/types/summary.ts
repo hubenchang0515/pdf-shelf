@@ -1,13 +1,13 @@
 type DocumentType = 'pdf' | 'dir' | 'txt';
 
-interface Document {
+export interface Document {
     id: string;
     type: DocumentType;
     name: string;
     path: string;
 }
 
-interface Category {
+export interface Category {
     id: string;
     name: string;
     path: string;

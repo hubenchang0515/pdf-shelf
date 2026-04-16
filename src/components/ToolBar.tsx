@@ -46,7 +46,7 @@ export default function ToolBar(props:ToolBarProps) {
                     <button class="cursor-pointer hover:scale-110 active:scale-100 bg-gray-200 dark:bg-gray-600 p-1" onClick={()=>props.onJump(props.page >= props.pdf.numPages ? props.pdf.numPages : props.page + 1)}><RightIcon/></button>
                 </span>
                 <Show when={showOutline()}>
-                    <div class="fixed top-12 bottom-10 left-0 right-0 2xl:w-85 overflow-hidden">
+                    <div class="fixed top-12 bottom-10 left-0 w-full 2xl:w-85 overflow-hidden">
                         <div class="w-full 2xl:max-w-85 bg-gray-200 dark:bg-gray-600 h-full overflow-auto">
                             <Outline items={outline()} onJump={async (dest)=>{
                                 const pageIndex = await props.pdf.getPageIndex(dest[0]);
@@ -58,6 +58,10 @@ export default function ToolBar(props:ToolBarProps) {
                             }}/>
                         </div>
                     </div>
+                    
+                    {/* <div class="none 2xl:fixed top-12 bottom-10 right-0 2xl:w-85 overflow-hidden bg-gray-200 p-4">
+                        TODO: 右侧边栏
+                    </div> */}
                 </Show>
             </div>
         </div>
