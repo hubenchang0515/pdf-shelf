@@ -108,6 +108,7 @@ export default function View(props:ViewProps) {
         const doc = await pdfjsLib.getDocument({
             url:path,
             cMapUrl: "https://cdn.jsdelivr.net/npm/pdfjs-dist@5.5.207/cmaps/",  // 字体
+            wasmUrl: "https://cdn.jsdelivr.net/npm/pdfjs-dist@5.5.207/wasm/",
             cMapPacked: true,
             standardFontDataUrl: "/standard_fonts/",
             disableAutoFetch: true,
