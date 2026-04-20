@@ -43,7 +43,7 @@ PDF sharing site - PDF 分享站点
 
 ## 文档目录
 
-> 共收录 129 部书籍
+> 共收录 152 部书籍
 
 - Android
   - [Android编程权威指南](https://pdf-shelf.pages.dev/1a8e00a0ab)
@@ -145,19 +145,42 @@ PDF sharing site - PDF 分享站点
 - Windows
   - [Windows核心编程](https://pdf-shelf.pages.dev/f008269e3e)
   - [Windows程序设计](https://pdf-shelf.pages.dev/06b3b7f3c1)
-- 小学数学
-  - [数学一年级上册](https://pdf-shelf.pages.dev/28b1462563)
-  - [数学一年级下册](https://pdf-shelf.pages.dev/a37f210770)
-  - [数学三年级上册](https://pdf-shelf.pages.dev/11331ba015)
-  - [数学三年级下册](https://pdf-shelf.pages.dev/29fd000a4e)
-  - [数学二年级上册](https://pdf-shelf.pages.dev/ae2646b51a)
-  - [数学二年级下册](https://pdf-shelf.pages.dev/5ce4f250f5)
-  - [数学五年级上册](https://pdf-shelf.pages.dev/24487ff378)
-  - [数学五年级下册](https://pdf-shelf.pages.dev/0944c6bc69)
-  - [数学六年级上册](https://pdf-shelf.pages.dev/2bb1121d78)
-  - [数学六年级下册](https://pdf-shelf.pages.dev/6e9d23343b)
-  - [数学四年级上册](https://pdf-shelf.pages.dev/1ed27feb5b)
-  - [数学四年级下册](https://pdf-shelf.pages.dev/4cd1c9f7ef)
+- 数学
+  - [数学一年级上册](https://pdf-shelf.pages.dev/9b9736ea96)
+  - [数学一年级下册](https://pdf-shelf.pages.dev/a75757a4b2)
+  - [数学七年级上册](https://pdf-shelf.pages.dev/6a4d3763e0)
+  - [数学七年级下册](https://pdf-shelf.pages.dev/dbc5aeeb4d)
+  - [数学三年级上册](https://pdf-shelf.pages.dev/4639fac67b)
+  - [数学三年级下册](https://pdf-shelf.pages.dev/7ee296c03a)
+  - [数学九年级上册](https://pdf-shelf.pages.dev/1d9011a54f)
+  - [数学九年级下册](https://pdf-shelf.pages.dev/41a6f86541)
+  - [数学二年级上册](https://pdf-shelf.pages.dev/434ac98aef)
+  - [数学二年级下册](https://pdf-shelf.pages.dev/02abd4f15d)
+  - [数学五年级上册](https://pdf-shelf.pages.dev/608341ca2a)
+  - [数学五年级下册](https://pdf-shelf.pages.dev/cde3374268)
+  - [数学八年级上册](https://pdf-shelf.pages.dev/09c58681a8)
+  - [数学八年级下册](https://pdf-shelf.pages.dev/191a4530aa)
+  - [数学六年级上册](https://pdf-shelf.pages.dev/6b7fee0421)
+  - [数学六年级下册](https://pdf-shelf.pages.dev/3620eb3e0a)
+  - [数学四年级上册](https://pdf-shelf.pages.dev/d96a67a701)
+  - [数学四年级下册](https://pdf-shelf.pages.dev/8acb3255bb)
+  - [概率论与数理统计（浙大第四版）](https://pdf-shelf.pages.dev/3ce0832994)
+  - [离散数学及其应用（中文第六版）](https://pdf-shelf.pages.dev/bffe0e5c4a)
+  - [离散数学及其应用（英文第七版）](https://pdf-shelf.pages.dev/09ffd9a973)
+  - [线性代数（同济第五版）](https://pdf-shelf.pages.dev/f0577a02bb)
+  - [高中数学（A版）必修一](https://pdf-shelf.pages.dev/ef088cd525)
+  - [高中数学（A版）必修二](https://pdf-shelf.pages.dev/7ee6d911c9)
+  - [高中数学（A版）选修一](https://pdf-shelf.pages.dev/c8340275a9)
+  - [高中数学（A版）选修三](https://pdf-shelf.pages.dev/6b4df7ebd4)
+  - [高中数学（A版）选修二](https://pdf-shelf.pages.dev/09320e263b)
+  - [高等数学（同济第七版）上册](https://pdf-shelf.pages.dev/fd36c42010)
+  - [高等数学（同济第七版）下册](https://pdf-shelf.pages.dev/4a54a468e7)
+- 树莓派
+  - [Fling on Raspberry Pi](https://pdf-shelf.pages.dev/8b1814c57e)
+  - [Raspberry Pi and Python](https://pdf-shelf.pages.dev/33c7d23db4)
+  - [Raspberry Pi Cookbook](https://pdf-shelf.pages.dev/600f75c441)
+  - [树莓派Python编程指南](https://pdf-shelf.pages.dev/cb7c1401e8)
+  - [树莓派学习指南（基于Linux）](https://pdf-shelf.pages.dev/c29a0811af)
 - 汇编语言
   - [汇编语言 第4版](https://pdf-shelf.pages.dev/3ed146240f)
 - 算法
@@ -178,6 +201,7 @@ PDF sharing site - PDF 分享站点
   - [TCP_IP详解卷3：TCP事务协议，HTTP，NNTP和UNIX域协议](https://pdf-shelf.pages.dev/27ad9b7c50)
   - [Web性能权威指南](https://pdf-shelf.pages.dev/00a4c2fef1)
   - [Wireshark数据包分析实战（第3版）](https://pdf-shelf.pages.dev/547432c86c)
+  - [Wireshark网络分析实战](https://pdf-shelf.pages.dev/09626bbeeb)
   - [图解HTTP](https://pdf-shelf.pages.dev/4aad2eeea3)
 - 计算机基础
   - [SICP](https://pdf-shelf.pages.dev/caeb7ad737)
