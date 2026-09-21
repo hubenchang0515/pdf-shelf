@@ -43,7 +43,7 @@ PDF sharing site - PDF 分享站点
 
 ## 文档目录
 
-> 共收录 152 部书籍
+> 共收录 153 部书籍
 
 - Android
   - [Android编程权威指南](https://pdf-shelf.pages.dev/1a8e00a0ab)
@@ -203,6 +203,8 @@ PDF sharing site - PDF 分享站点
   - [Wireshark数据包分析实战（第3版）](https://pdf-shelf.pages.dev/547432c86c)
   - [Wireshark网络分析实战](https://pdf-shelf.pages.dev/09626bbeeb)
   - [图解HTTP](https://pdf-shelf.pages.dev/4aad2eeea3)
+- 英语
+  - [赖世雄美语音标](https://pdf-shelf.pages.dev/5490437ec5)
 - 计算机基础
   - [SICP](https://pdf-shelf.pages.dev/caeb7ad737)
   - [深入理解计算机系统](https://pdf-shelf.pages.dev/f1c5b9ef64)
