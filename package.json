@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && tsx tools/seo.ts",
     "preview": "vite preview",
     "scan": "tsx tools/scan.ts",
     "deploy": "npx wrangler pages deploy dist --branch main"
@@ -16,7 +16,8 @@
     "pdf-lib": "^1.17.1",
     "pdfjs-dist": "^5.5.207",
     "solid-js": "^1.9.11",
-    "tailwindcss": "^4.2.2"
+    "tailwindcss": "^4.2.2",
+    "vite-plugin-pwa": "^2.0.0"
   },
   "devDependencies": {
     "@types/node": "^24.12.2",
