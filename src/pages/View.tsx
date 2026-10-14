@@ -10,6 +10,9 @@ import ToolBar from '../components/ToolBar';
 import Loading from '../components/Loading';
 import { mergePdf } from '../utils/pdf';
 import { getHistory, setHistory } from '../utils/history';
+import { docSeo, setPageSeo } from '../utils/seo';
+import { countDocs } from '../utils/seoContent';
+import { encodePath } from '../utils/url';
 pdfjsLib.GlobalWorkerOptions.workerSrc = workerSrc;
 
 export interface ViewProps {
@@ -19,7 +22,7 @@ export interface ViewProps {
 
 async function merge(partitions:string[]) {
     const files = await Promise.all(partitions.map(async (file:string) => {
-        const res = await fetch(file);
+        const res = await fetch(encodePath(file));
         const data = await res.arrayBuffer();
         return new File([data], file, { type:'application/octet-stream' });
     }));
@@ -31,13 +34,13 @@ async function loadPdf(filepath:string) {
 }
 
 async function loadTxt(filepath:string) {
-    const res = await fetch(filepath);
+    const res = await fetch(encodePath(filepath));
     const text = await res.text();
     return await merge(['/cover.pdf', text]);
 }
 
 async function loadDir(dirpath:string) {
-    const res = await fetch(dirpath + '/manifest.json');
+    const res = await fetch(encodePath(dirpath + '/manifest.json'));
     const manifest = await res.json();
     const partitions = await Promise.all(manifest.partitions.map(async (file:string) => {
         return dirpath + '/' + file;
@@ -47,11 +50,19 @@ async function loadDir(dirpath:string) {
 
 export default function View(props:ViewProps) {
     let view!: HTMLDivElement;
-    const file = props.summary.flatMap(dir => dir.docs).find(file => file.id === props.id);
+    const category = props.summary.find(dir => dir.docs.some(file => file.id === props.id));
+    const file = category?.docs.find(file => file.id === props.id);
     const [path, setPath] = createSignal<string>(file!.name);
     const [pdf, setPdf] = createSignal<any>();
     const [size, setSize] = createSignal<[number, number]>([0,0]);
     const [page, setPage] = createSignal(1);
+
+    // 同步页面 SEO 信息
+    onMount(() => {
+        if (category && file) {
+            setPageSeo(docSeo(category, file, countDocs(props.summary)));
+        }
+    });
 
     // 记录历史
     createEffect(() => {
@@ -128,6 +139,7 @@ export default function View(props:ViewProps) {
 
     return (
         <main class='relative w-full h-full shrink-1 p-2'>
+            <h1 class='sr-only'>《{file!.name}》PDF 在线阅读与下载</h1>
             <div ref={view} class='max-w-3xl m-auto flex flex-col gap-1'>
                 <Show when={size()[1] > 0} fallback={<Loading title={file!.name}/>}>
                     <For each={new Array(pdf().numPages)}>

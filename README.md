@@ -21,6 +21,18 @@ PDF sharing site - PDF 分享站点
 
 运行 `npm run build` 进行构建。
 
+## SEO
+
+构建（`npm run build`）时会自动执行 `tools/seo.ts`，为搜索引擎生成以下内容：
+
+* 每个文档一份静态 HTML（`dist/<id>.html`），Cloudflare Pages 会以 `/<id>` 提供，包含独立的 `title`、`description`、`keywords`、canonical、Open Graph 及 `Book` / `BreadcrumbList` 结构化数据；
+* 重写首页 `dist/index.html`，注入站点简介与完整书籍目录；
+* `dist/robots.txt`、`dist/sitemap.xml`；
+* `dist/404.html`（同时让 Cloudflare Pages 关闭 SPA 兜底，避免软 404 被索引）。
+
+站点文案集中在 `src/utils/seoContent.ts`，构建脚本与浏览器端共用，避免两边不一致。
+新增页面路由时，记得同步更新 `tools/seo.ts` 的预渲染逻辑。
+
 ## 辅助工具
 
 * [PDF 拆分工具](https://misc.xplanc.org/pdf-split)
@@ -43,7 +55,7 @@ PDF sharing site - PDF 分享站点
 
 ## 文档目录
 
-> 共收录 157 部书籍
+> 共收录 158 部书籍
 
 - Android
   - [Android编程权威指南](https://pdf-shelf.pages.dev/1a8e00a0ab)
@@ -55,6 +67,7 @@ PDF sharing site - PDF 分享站点
 - C++
   - [C++ Primer 5th edition](https://pdf-shelf.pages.dev/6916b41734)
   - [C++ Primer Plus 第五版 中文](https://pdf-shelf.pages.dev/6ff82ee07f)
+  - [C++ Primer 第五版 中文](https://pdf-shelf.pages.dev/b034c52989)
   - [C++ Primer 第四版 中文](https://pdf-shelf.pages.dev/ed3694edf2)
   - [Effective C++ 3rd ed](https://pdf-shelf.pages.dev/a4db8dc469)
   - [Effective C++ 第三版 中文](https://pdf-shelf.pages.dev/c1ac781ccf)
