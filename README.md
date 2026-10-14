@@ -43,10 +43,15 @@ PDF sharing site - PDF 分享站点
 
 ## 文档目录
 
-> 共收录 153 部书籍
+> 共收录 157 部书籍
 
 - Android
   - [Android编程权威指南](https://pdf-shelf.pages.dev/1a8e00a0ab)
+- C#
+  - [.NET CLR via C#(第4版)](https://pdf-shelf.pages.dev/2cb745eac7)
+  - [C#入门经典](https://pdf-shelf.pages.dev/61c209e485)
+  - [C#本质论 第4版 C#5.0](https://pdf-shelf.pages.dev/1b1b650e7b)
+  - [C#高级编程(中文第七版)](https://pdf-shelf.pages.dev/8c626be8c3)
 - C++
   - [C++ Primer 5th edition](https://pdf-shelf.pages.dev/6916b41734)
   - [C++ Primer Plus 第五版 中文](https://pdf-shelf.pages.dev/6ff82ee07f)
